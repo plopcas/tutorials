@@ -22,7 +22,7 @@ public class BalancedBinaryTree {
             int depth = ndp.depth;
 
             // if it's a leaf
-            if (node.left == null & node.right == null) {
+            if (node.left == null && node.right == null) {
                 // check depth
                 if (!depths.contains(depth)) {
                     depths.add(depth);
