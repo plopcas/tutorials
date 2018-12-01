@@ -2267,10 +2267,29 @@ limitations under the License.
       opacity: 1;
     }
 
+    .ampstart-image-fullpage-hero {
+      overflow: hidden;
+    }
+
   </style>
 </head>
 
 <body>
+
+  <amp-animation trigger="visibility" layout="nodisplay">
+    <script type="application/json">
+      {
+        "target": "heroimage",
+        "duration": 30000,
+        "delay": 0,
+        "fill": "forwards",
+        "easing": "ease-out",
+        "keyframes": {
+          "transform": "scale(1.3)"
+        }
+      }
+    </script>
+  </amp-animation>
 
   <!-- Start Navbar -->
   <header class="ampstart-headerbar fixed flex justify-start items-center top-0 left-0 right-0 pl2 pr4">
@@ -2424,10 +2443,7 @@ limitations under the License.
   <!-- End Navbar -->
 
   <figure class="ampstart-image-fullpage-hero m0 relative mb4">
-    <amp-img width="404" height="720" layout="responsive" src="https://unsplash.it/600/900?image=1003" media="(max-width: 415px)"
-      alt="Beautiful Image of a rectangle"></amp-img>
-    <amp-img height="720" layout="fixed-height" src="https://unsplash.it/1200/1800?image=1003" media="(min-width: 416px)"
-      alt="Beautiful Image of a rectangle"></amp-img>
+    <amp-img id="heroimage" height="1800" layout="fixed-height" src="https://unsplash.it/1200/1800?image=1003" alt="Beautiful Image of a rectangle"></amp-img>
     <figcaption class="absolute top-0 right-0 bottom-0 left-0">
       <header amp-fx="parallax" data-parallax-factor="1.5" class="p3">
         <h1 class="ampstart-fullpage-hero-heading mb3">
